@@ -18,10 +18,21 @@
     <script src="https://cdn.jsdelivr.net/npm/p5.sound@latest/dist/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="/socket.io/socket.io.js"></script>
-    <title>frequency-links</title>
+    <title>Create a Drawing With Your Shape</title>
   </head>
   <body>
+    <h1>Create a Drawing With Your Shape</h1>
+    <p id="status">
+      Connecting to the server...
+    </p>
     <div id="main">
+    </div>
+    <div id="controls">
+      <h2>Your Shape</h2>
+      <div id="X Position"> <input id="xSlider" type="range" min="0" max="100" value="50"></div>
+      <div id="Y Position"> <input id="ySlider" type="range" min="0" max="100" value="50"></div>
+      <div id="Size"> <input id="sizeSlider" type="range" min="20" max="200" value="80"></div>
+      <div id="Rotation"> <input id="rotationSlider" type="range" min="0" max="360" value="0"></div>
     </div>
     <script src="sketch.js"></script>
   </body>

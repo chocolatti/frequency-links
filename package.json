@@ -1,7 +1,7 @@
 {
-  "name": "chime-server",
+  "name": "Create your painting with shapes",
   "version": "1.0.0",
-  "description": "a multi-user cyber haunting",
+  "description": "a multi-person website",
   "main": "index.js",
   "engines": {
     "node": "18.x.x"

@@ -1,62 +1,79 @@
 body {
     margin:0;
     padding:0;
-    min-height:100vh;
     font-family: sans-serif;
-    font-size: 13px;
-    font-weight: 100;
+    font-size: 14px;
+    background: #f2f2f2;
     }
 
-.controls {
-    margin:auto;
-    width:80%;  
-    text-align:center;  
+h1 {
+  text-align:center;
+  font-weight:normal;
+  margin-top:30px;
 }
 
-button {
-  font-size:12;
-  font-family: 'Playfair', sans-serif;
-  font-style: italic;
-  font-style: oblique;
-  /* background-color:transparent; */
-  /* border-color:red; */
-  border-radius:1000px;
-  border-style:solid;
-  border-width:1px; 
-  width:60px;
-  height:20px;
-  cursor:pointer;
-  /* color:white; */
-  /* box-shadow:1px 2px 8px grey; */
-  margin-left:10px;
-}
-
-.disappear {
-  opacity: 0;
-  height:0px;
-  margin:0px;
-  padding:0px;
-  visibility: hidden;
-}
-
-#submit {
-  width:60px;
-  height:20px;
+#status {
+  text-align:center;
+  font-size:12px;
   font-family: sans-serif;
-}
-
-#buttonText {
-  width:60px;
-  height:20px;
-  font-family: sans-serif;
+  margin-top:10px;
 }
 
 #main {
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  position: relative;
+  width:800px;
+  height:500px;
+  margin: 30px auto;
+  background:white;
+  border: 1px solid black;
+  overflow:hidden;
+}
+
+.shape {
+  position:absolute;
+  transform-origin: center center;
+  transition: 
+    left 0.1s linear,
+    top 0.1s linear,
+    width 0.1s linear,
+    height 0.1s linear,
+    transform 0.1s linear;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius:0;
+}
+
+.triangle {
+  clip-path: polygon(
+    50% 0%,
+    0% 100%
+    100% 100%
+  );
+}
+
+.diamond {
+  clip-path: polygon(
+    50% 0%,
+    100% 50%,
+    50% 100%
+    0% 50%
+  );
+}
+
+#controls {
   width:400px;
-  height:400px;
-  margin:25px auto 0;
+  margin:30px auto;
+}
+
+#controls h2 {
+  font-weight:normal;
+}
+
+input[type=range] {
+  width:100%;
 }
