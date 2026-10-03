@@ -56,14 +56,6 @@ io.emit("shapeUpdate", shapes[socket.id]);
 
 socket.on("shapeUpdate", (data) => {
 
-  if (!shapes[socket.id]) {
-    return;
-  }
-
-  if (data.id !== socket.id) {
-    return;
-  }
-
   shapes[socket.id].x = data.x;
   shapes[socket.id].y = data.y;
   shapes[socket.id].size = data.size;
